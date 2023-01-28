@@ -1,0 +1,53 @@
+.icon{
+    position: relative;
+    border: 1px solid grey;
+            border-radius: 110px;
+            padding: 10px;
+            cursor: pointer;
+}
+.icon:hover {
+    cursor: pointer;
+    border: 1px solid #27ae60;
+    transition: border-color 0.3s ease-out;
+    animation: shockwave 0.5s ease-in;
+}
+.icon:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50%;
+    width: 102px;
+    height: 108px;
+}
+.icon:hover:after {
+    animation: shockwave 2s ease-in infinite;
+}
+
+@keyframes shockwave {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 2px #27ae60;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 20px #145b32, inset 0 0 10px #27ae60;
+    }
+}
+
+.clapIcon{
+    width:80px;
+    height: 80px;
+    fill: none;
+        stroke: #27ae60;
+        stroke-width: 2px;
+}
+.clapIcon.checked {
+    fill: #27ae60;
+    stroke: #fff;
+    stroke-width: 1px;
+}
